@@ -1,0 +1,11 @@
+int reductionOperations(vector<int>& nums) {
+        map<int, int, greater<int>> mp;
+        for(auto c: nums) mp[c]++;
+        int sum,ans;
+        sum = ans = 0;
+        for(auto& [x,y]:mp){
+            ans += sum;
+            sum += y;
+        }
+        return ans;
+    }
